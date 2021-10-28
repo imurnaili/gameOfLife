@@ -1,0 +1,49 @@
+.Controll{
+  display: inline;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-style: solid;
+  border-width: 1px;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex: 0 0 auto
+}
+
+.cell{
+  flex: 0 0 auto;
+  padding: 1rem;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+  &-active{
+    @extend .cell;
+    background-color: #24c824;
+  }
+  &-inactive{
+    @extend .cell;
+    background-color: #5e5656;
+  }
+}
